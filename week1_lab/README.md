@@ -1,5 +1,14 @@
 # Week 1 Lab — Internet Technologies
 
-This folder contains the Week 1 static website and lab notes.
+A simple three-page personal website made with HTML and CSS.
 
-Open `index.html` in a browser. The website includes Home, About and Contact pages, URL practice, DNS/HTTP notes, and client-server examples.
+## Pages
+- `index.html` — Home
+- `about.html` — About me
+- `contact.html` — Contact
+
+## How to open
+Open `index.html` in your web browser. All pages are connected through the navigation menu.
+
+## Files
+- `style.css` — basic website styling
