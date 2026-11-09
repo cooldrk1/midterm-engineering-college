@@ -1,0 +1,2 @@
+# Assignments website
+Responsive dark website with 25 assignment slots: Section 1 has 20 tasks and Section 2 has 5. Open index.html; each button opens its own detail page. Empty tasks show “Solution not found”. Add task descriptions and solutions in js/assignments.js.
