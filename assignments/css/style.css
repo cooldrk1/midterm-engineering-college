@@ -1,0 +1,15 @@
+:root{color-scheme:dark;--page:#0d1016;--panel:#171c23;--section:#0e1218;--card:#1c222b;--border:#2a313b;--text:#f1f3f6;--muted:#c4cbd5;--link:#69a7ff}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--page);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.page{width:min(1100px,100%);min-height:100vh;margin:auto;padding:38px 34px 56px;background:var(--panel);border-left:1px solid #252b34;border-right:1px solid #252b34}
+h1{margin:0 0 34px;font-size:clamp(25px,3vw,34px);line-height:1.2}.sections{display:grid;gap:28px}
+.assignment-section{padding:27px 28px 28px;background:var(--section);border:1px solid var(--border);border-radius:10px}.assignment-section h2{margin:0 0 22px;font-size:20px}
+.assignment-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.assignment-button{min-height:54px;display:flex;align-items:center;justify-content:center;padding:12px 8px;border:1px solid #2b323c;border-radius:8px;background:var(--card);color:var(--muted);text-decoration:none;text-align:center;font-size:16px;transition:background .15s,border-color .15s,transform .15s}
+.assignment-button:hover{background:#27313e;border-color:#46566b;transform:translateY(-1px)}
+.detail-page{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:24px}
+.message-card{width:min(458px,100%);min-height:280px;padding:48px 30px 38px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.message-card h1{margin:0 0 24px;font-size:34px}.message-card p{margin:0 0 22px;color:var(--muted);font-size:20px;line-height:1.45}
+.back-link{color:var(--link);text-decoration:none;font-size:20px}.back-link:hover{text-decoration:underline}
+.solution-content{width:100%;color:var(--muted);text-align:left;line-height:1.6;white-space:pre-wrap}.solution-content:empty{display:none}
+@media(max-width:850px){.assignment-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.page{padding:28px 20px 40px}}
+@media(max-width:520px){.assignment-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.assignment-section{padding:21px 16px}.assignment-button{min-height:50px;font-size:14px}.message-card{padding:38px 20px}.message-card h1{font-size:28px}.message-card p,.back-link{font-size:18px}}
