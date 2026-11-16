@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Basics – Practice Exercises</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;line-height:1.6;color:#252525;background:#f4f6f8}
+header{position:sticky;top:0;z-index:10;background:#202b3c;color:white;padding:14px 5%}header h1{margin:0;font-size:22px}
+nav{display:flex;justify-content:space-evenly;align-items:center;gap:15px;flex-wrap:wrap;margin-top:8px}nav a{color:white;text-decoration:none;padding:5px 10px}
+.blue-paragraph{color:blue;font-size:18px;font-family:Arial,sans-serif}.highlight{background:yellow;font-weight:bold}
+.box-model{width:200px;padding:10px;border:2px solid black;margin:20px;background:white}
+.hex-color{color:#ff5733}.rgb-color{color:rgb(0,128,255)}.hsl-color{color:hsl(120,60%,40%)}
+.hover-link{color:#2457a6;text-decoration:none}.hover-link:hover{color:red}
+main{width:min(1100px,92%);margin:25px auto}section{background:white;padding:22px;margin-bottom:22px;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,.06)}h2{margin-top:0;color:#202b3c}
+.profile-card{max-width:280px;margin:15px auto;padding:22px;text-align:center;border-radius:16px;box-shadow:0 5px 18px rgba(0,0,0,.15);background:#fff}
+.avatar{width:90px;height:90px;border-radius:50%;margin:auto;display:grid;place-items:center;background:#dce8ff;color:#244b91;font-size:32px}
+.two-column{display:grid;grid-template-columns:30% 70%;gap:12px}.two-column aside,.two-column article{padding:15px;background:#edf2f8;border-radius:8px}
+.responsive-heading{font-size:32px}.gallery{display:flex;flex-wrap:wrap;gap:12px}
+.gallery-item{flex:1 1 calc(25% - 12px);min-width:130px;min-height:110px;display:grid;place-items:center;border-radius:10px;color:white;font-size:22px;font-weight:bold;background:linear-gradient(135deg,#4776a8,#273c75)}
+.animated-button{border:0;border-radius:8px;padding:12px 20px;background:#285ca8;color:white;cursor:pointer;transition:background-color .5s,transform .5s}.animated-button:hover{background:#e04b4b;transform:scale(1.06)}
+.landing-grid{display:grid;grid-template-columns:1fr 3fr;grid-template-areas:"head head" "side content" "foot foot";gap:10px}.landing-grid>div{padding:18px;border-radius:8px;background:#e8eef7}
+.landing-head{grid-area:head}.landing-side{grid-area:side}.landing-content{grid-area:content}.landing-foot{grid-area:foot;text-align:center}
+.cards{display:flex;gap:15px}.info-card{flex:1;padding:18px;border:1px solid #d9dee7;border-radius:10px;background:#fafcff}
+#backToTop{position:fixed;right:22px;bottom:22px;display:none;border:0;border-radius:50%;width:48px;height:48px;color:white;background:#202b3c;font-size:22px;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.2)}#backToTop:hover{background:#e04b4b}
+footer{text-align:center;padding:20px;color:#667085}
+@media(max-width:600px){.responsive-heading{font-size:22px}.gallery-item{flex-basis:calc(50% - 12px)}.two-column{grid-template-columns:1fr}.landing-grid{grid-template-columns:1fr;grid-template-areas:"head" "side" "content" "foot"}.cards{flex-direction:column}header h1{font-size:19px}}
+</style>
+</head>
+<body>
+<header id="top"><h1>CSS Basics – Practice Exercises</h1><nav><a href="#beginner">Beginner</a><a href="#intermediate">Intermediate</a><a href="#challenging">Challenging</a></nav></header>
+<main>
+<section id="beginner"><h2>8.1. Beginner Exercises</h2>
+<h3>1. Text Styling</h3><p class="blue-paragraph">This paragraph is blue, 18px, and uses Arial font.</p>
+<h3>2. Class Selector</h3><p>This is a normal sentence with a <span class="highlight">highlighted word</span> inside it.</p>
+<h3>3. Box Model Basics</h3><div class="box-model">Box Model</div>
+<h3>4. Colors: HEX, RGB and HSL</h3><p class="hex-color">This text uses HEX color: #ff5733.</p><p class="rgb-color">This text uses RGB color: rgb(0, 128, 255).</p><p class="hsl-color">This text uses HSL color: hsl(120, 60%, 40%).</p>
+<h3>5. Link Hover Effect</h3><a class="hover-link" href="#intermediate">Move your mouse over this link – it turns red.</a></section>
+<section id="intermediate"><h2>8.2. Intermediate Exercises</h2>
+<h3>6. Positioning: Back to Top</h3><p>Scroll down the page. A fixed Back to Top button will appear in the bottom-right corner.</p>
+<h3>7. Profile Card</h3><div class="profile-card"><div class="avatar">N</div><h3>Student Profile</h3><p>Web Development Student</p><p>Learning HTML and CSS.</p></div>
+<h3>8. Flexbox Navigation</h3><p>The navigation bar at the top uses Flexbox with evenly spaced links.</p>
+<h3>9. Grid Layout: 30% Sidebar / 70% Main</h3><div class="two-column"><aside><strong>Sidebar (30%)</strong><br>Menu and links</aside><article><strong>Main Content (70%)</strong><br>This is the main content area of the layout.</article></div>
+<h3 class="responsive-heading">10. Media Queries</h3><p>This heading becomes smaller on screens narrower than 600px.</p></section>
+<section id="challenging"><h2>8.3. Challenging Exercises</h2>
+<h3>11. Flexbox Gallery</h3><p>The gallery displays four items per row on wide screens and two per row on small screens.</p><div class="gallery"><div class="gallery-item">1</div><div class="gallery-item">2</div><div class="gallery-item">3</div><div class="gallery-item">4</div><div class="gallery-item">5</div><div class="gallery-item">6</div><div class="gallery-item">7</div><div class="gallery-item">8</div></div>
+<h3>12. Sticky Header</h3><p>The dark header remains at the top while you scroll the page.</p>
+<h3>13. Animated Button</h3><button class="animated-button" id="demoButton">Hover over me</button><p id="buttonMessage" aria-live="polite">The button changes color smoothly when hovered.</p>
+<h3>14. Grid-based Landing Page</h3><div class="landing-grid"><div class="landing-head"><strong>Landing Page Header</strong></div><div class="landing-side">Sidebar</div><div class="landing-content">Main content area. This page section is arranged using CSS Grid.</div><div class="landing-foot">Footer</div></div>
+<h3>15. Responsive Card Layout</h3><div class="cards"><div class="info-card"><h4>HTML</h4><p>Structure of a web page.</p></div><div class="info-card"><h4>CSS</h4><p>Style and layout of a web page.</p></div><div class="info-card"><h4>JavaScript</h4><p>Interactivity and behavior.</p></div></div></section>
+</main>
+<footer><p>CSS Basics Practice Project · <span id="year"></span></p></footer>
+<button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+const backToTopButton=document.getElementById("backToTop");
+window.addEventListener("scroll",()=>{backToTopButton.style.display=window.scrollY>250?"block":"none";});
+backToTopButton.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"});});
+document.getElementById("year").textContent=new Date().getFullYear();
+const demoButton=document.getElementById("demoButton");
+const buttonMessage=document.getElementById("buttonMessage");
+demoButton.addEventListener("click",()=>{buttonMessage.textContent="Button clicked! JavaScript is working.";});
+</script>
+</body>
+</html>
